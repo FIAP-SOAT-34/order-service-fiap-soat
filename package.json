@@ -1,0 +1,31 @@
+{
+  "name": "order-service-fiap-soat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src --out-dir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FIAP-SOAT-34/order-service-fiap-soat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FIAP-SOAT-34/order-service-fiap-soat/issues"
+  },
+  "homepage": "https://github.com/FIAP-SOAT-34/order-service-fiap-soat#readme",
+  "devDependencies": {
+    "@types/node": "^20.12.5",
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "fastify": "^4.26.2"
+  }
+}
