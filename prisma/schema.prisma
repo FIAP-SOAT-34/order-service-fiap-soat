@@ -24,11 +24,6 @@ enum OrderStatus {
   CANCELLED
 }
 
-enum NotificationStatus {
-  PENDING
-  SENT
-}
-
 enum PaymentMethod {
   QR_CODE
 }
@@ -42,7 +37,6 @@ model Client {
   updated_at DateTime? @updatedAt
 
   orders            Order[]
-  OrderNotification OrderNotification[]
 
   @@map("clients")
 }
@@ -60,25 +54,9 @@ model Order {
   updated_at      DateTime?     @updatedAt
 
   client             Client?             @relation(fields: [client_id], references: [id])
-  orderNotifications OrderNotification[]
   orderComboItems    OrderComboItem[]
 
   @@map("orders")
-}
-
-model OrderNotification {
-  id         String             @id @default(uuid())
-  order_id   String
-  client_id  String
-  message    String
-  status     NotificationStatus
-  created_at DateTime           @default(now())
-  updated_at DateTime?          @updatedAt
-
-  order  Order  @relation(fields: [order_id], references: [id])
-  client Client @relation(fields: [client_id], references: [id])
-
-  @@map("order_notifications")
 }
 
 model OrderComboItem {
