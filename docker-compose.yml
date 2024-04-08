@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  order-service-fiap-soat-pg:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5434
+    environment:
+      - POSTGRES_USERNAME=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DATABASE=order_service_db
