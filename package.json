@@ -21,6 +21,7 @@
   "homepage": "https://github.com/FIAP-SOAT-34/order-service-fiap-soat#readme",
   "devDependencies": {
     "@types/node": "20.12.5",
+    "prisma": "5.12.1",
     "tsup": "8.0.2",
     "tsx": "4.7.2",
     "typescript": "5.4.4"
